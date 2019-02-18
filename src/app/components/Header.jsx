@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import {
   Navbar,
-  NavbarBrand,
   Nav,
-  NavLink,
 } from 'reactstrap';
+import { Link } from 'react-router-dom';
 import Links from './nav';
 
 import './Header.scss';
@@ -13,21 +12,23 @@ class Header extends Component {
   render() {
     return (
       <Navbar color="dark" dark expand="md">
-          <NavbarBrand href="/">
-            <img
-              alt=""
-              src="/static/media/bootstrapLogo.svg"
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
-            />
-          </NavbarBrand>
+          <div className='navbar-brand'>
+            <Link to="/">
+              <img
+                alt=""
+                src="/static/media/bootstrapLogo.svg"
+                width="30"
+                height="30"
+                className="d-inline-block align-top"
+              />
+            </Link>
+          </div>
           <Nav className="mr-auto" >
           </Nav>
           <Nav navbar>
             {
               Links.map((item, i) => (
-                <NavLink key={i} href={item.link}>{item.text}</NavLink>    
+                <Link className="nav-link" key={i} to={item.link}>{item.text}</Link>    
               ))
             }
           </Nav>

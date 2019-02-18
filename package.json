@@ -21,15 +21,19 @@
     "react": "^16.8.1",
     "react-bootstrap": "^1.0.0-beta.5",
     "react-dom": "^16.8.1",
+    "react-event-timeline": "^1.6.3",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
     "reactstrap": "^7.1.0"
   },
   "scripts": {
-    "analyze": "source-map-explorer build/static/js/main.*",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "analyze_1": "source-map-explorer build/static/js/1.*",
+    "analyze_main": "source-map-explorer build/static/js/main.*",
+    "start": "cross-env NODE_PATH=src react-scripts start",
+    "build": "cross-env NODE_PATH=src react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build & copy \"build\\index.html\" \"build\\404.html\"",
     "deploy": "gh-pages -b master -d build"
   },
   "browserslist": [
@@ -39,6 +43,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "cross-env": "^5.2.0",
     "gh-pages": "^2.0.1",
     "node-sass": "^4.11.0",
     "react-scripts": "2.1.3",

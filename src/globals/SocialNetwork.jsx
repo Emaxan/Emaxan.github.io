@@ -20,7 +20,7 @@ class SocialNetwork extends Component {
   render(){
     return (
       <a
-        className="App-link social-network-link"
+        className="social-network-link"
         href={this.props.link}
         target="_blank"
         rel="noopener noreferrer"
@@ -37,7 +37,7 @@ class SocialNetwork extends Component {
 export default SocialNetwork;
 
 SocialNetwork.propTypes = {
-  icon : PropTypes.object.isRequired,
+  icon : PropTypes.arrayOf(PropTypes.string).isRequired,
   link : PropTypes.string.isRequired,
   size : PropTypes.string.isRequired,
   text : PropTypes.string.isRequired,

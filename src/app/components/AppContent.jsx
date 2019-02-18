@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
+import About from 'about/About';
+import Home from 'home/Home';
 
 import './AppContent.scss';
 
@@ -6,18 +9,13 @@ class AppContent extends Component {
   render() {
     return (
       <div className="AppContent">
-        <img src="/static/media/logo.svg" className="App-logo" alt="logo" />
-        <p>
-          This beautiful site created using ReactJS.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <Switch>
+        <Route exact path="/" component={ Home } />
+        <Route exact path="/aboutme" component={() => (<div>About me</div>)} />
+        <Route exact path="/cv" component={() => (<div>CV</div>)} />
+        <Route exact path="/about" component={ About } />
+        <Route path="*" component={() => (<div> 404 </div>)} />
+      </Switch>
       </div>
     );
   }

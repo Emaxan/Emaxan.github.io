@@ -1,84 +1,68 @@
-import { 
-  faVk, 
-  faTwitter, 
-  faInstagram, 
-  faFacebook, 
-  faGithub, 
-  faLinkedin, 
-  faSkype,
-  faYoutube,
-  faTwitch,
-  faSteamSquare,
-  faViber
-} from '@fortawesome/free-brands-svg-icons';
-
-const size = "2x";
-
-export default [
+[
   {
     "link" : "https://vk.com/maxwell_caulfield",
     "text" : "Вконтакте",
-    "icon" : faVk,
-    "size" : size,
+    "icon" : ["fab","vk"],
+    "size" : "2x"
   },
   {
     "link" : "https://twitter.com/emaxan1997",
     "text" : "Twitter",
-    "icon" : faTwitter,
-    "size" : size,
+    "icon" : ["fab","twitter"],
+    "size" : "2x"
   },
   {
     "link" : "https://github.com/Emaxan",
     "text" : "Github",
-    "icon" : faGithub,
-    "size" : size,
+    "icon" : ["fab","github"],
+    "size" : "2x"
   },
   {
     "link" : "https://www.facebook.com/ErmoshinMaximAlexandrovich",
     "text" : "Facebook",
-    "icon" : faFacebook,
-    "size" : size,
+    "icon" : ["fab","facebook"],
+    "size" : "2x"
   },
   {
     "link" : "https://www.instagram.com/maxine.__.caulfield/",
     "text" : "Instagram",
-    "icon" : faInstagram,
-    "size" : size,
+    "icon" : ["fab","instagram"],
+    "size" : "2x"
   },
   {
     "link" : "https://www.linkedin.com/in/maxim-ermoshyn-0a5668104/",
     "text" : "LinkedIn",
-    "icon" : faLinkedin,
-    "size" : size,
+    "icon" : ["fab","linkedin"],
+    "size" : "2x"
   },
   {
     "link" : "skype:maxikanec2",
     "text" : "Skype",
-    "icon" : faSkype,
-    "size" : size,
+    "icon" : ["fab","skype"],
+    "size" : "2x"
   },
   {
     "link" : "https://steamcommunity.com/id/rose_lalonde/",
     "text" : "Steam",
-    "icon" : faSteamSquare,
-    "size" : size,
+    "icon" : ["fab","steam"],
+    "size" : "2x"
   },
   {
     "link" : "https://www.youtube.com/channel/UCN7SXvzRbsiGRDTsZUuJr7w",
     "text" : "Youtube",
-    "icon" : faYoutube,
-    "size" : size,
+    "icon" : ["fab","youtube"],
+    "size" : "2x"
   },
   {
     "link" : "https://www.twitch.tv/rose__lalonde",
     "text" : "Twitch",
-    "icon" : faTwitch,
-    "size" : size,
+    "icon" : ["fab","twitch"],
+    "size" : "2x"
   },
   {
     "link" : "viber:add?number=375298004846",
     "text" : "Viber",
-    "icon" : faViber,
-    "size" : size,
-  },
+    "icon" : ["fab","viber"],
+    "size" : "2x"
+  }
 ]
